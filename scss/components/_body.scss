@@ -1,3 +1,19 @@
 body {
     background: url('../images/bg-stars.svg') $very-dark-blue;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 198px;
+}
+
+footer {
+    background: url('../images/pattern-hills.svg');
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+header {
+    align-self: end;
 }

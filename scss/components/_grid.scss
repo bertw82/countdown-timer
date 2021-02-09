@@ -1,0 +1,26 @@
+#clock,
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin: 15px;
+    @include mq(med){
+        width: 70%;
+        margin: 20px auto;
+    }
+    @include mq(lg){
+        max-width: 650px;
+        grid-gap: 30px;
+    }
+}
+
+.clock-face {
+    background: $dark-blue;
+    height: 85px;
+    @include mq(med){
+        height: 120px;
+    }
+    @include mq(lg){
+        height: 140px;
+    }
+}

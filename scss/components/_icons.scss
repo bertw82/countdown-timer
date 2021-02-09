@@ -1,0 +1,11 @@
+.icon path:hover {
+    fill: $color-secondary;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0 auto 30px;
+}

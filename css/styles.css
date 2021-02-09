@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -337,8 +338,97 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  justify-content: center;
+  color: #8486a9;
+  padding-left: 0;
+}
+ul li {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+#clock,
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin: 15px;
+}
+@media (min-width: 768px) {
+  #clock,
+ul {
+    width: 70%;
+    margin: 20px auto;
+  }
+}
+@media (min-width: 1024px) {
+  #clock,
+ul {
+    max-width: 650px;
+    grid-gap: 30px;
+  }
+}
+
+.clock-face {
+  background: #343650;
+  height: 85px;
+}
+@media (min-width: 768px) {
+  .clock-face {
+    height: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  .clock-face {
+    height: 140px;
+  }
+}
+
+.icon path:hover {
+  fill: #fb6087;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin: 0 auto 30px;
+}
+
 body {
   background: url("../images/bg-stars.svg") #1e1f29;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 198px;
+}
+
+footer {
+  background: url("../images/pattern-hills.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+header {
+  align-self: end;
 }
 
 /*# sourceMappingURL=styles.css.map */

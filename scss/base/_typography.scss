@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+h1 {
+    color: $white;
+}
+
+ul {
+    list-style-type: none;
+    display: grid;
+    justify-content: center;
+    color: $color-primary;
+    padding-left: 0;
+    li {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
