@@ -337,4 +337,8 @@ template {
   display: none;
 }
 
+body {
+  background: url("../images/bg-stars.svg") #1e1f29;
+}
+
 /*# sourceMappingURL=styles.css.map */
