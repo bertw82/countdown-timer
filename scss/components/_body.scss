@@ -3,7 +3,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 198px;
+    grid-template-rows: 1fr 1fr 198px;
 }
 
 footer {
@@ -15,5 +15,14 @@ footer {
 }
 
 header {
-    align-self: end;
+    align-self: center;
+}
+
+.attribution {
+    margin-bottom: 20px;
+    color: $color-primary;
+    a {
+        color: $white;
+        text-decoration: none;
+    }
 }
