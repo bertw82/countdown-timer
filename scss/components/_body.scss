@@ -6,6 +6,15 @@ body {
     grid-template-rows: 1fr 1fr 198px;
 }
 
+header {
+    width: 90%;
+    margin: 0 auto;
+    align-self: center;
+    @include mq(med){
+        width: 100%;
+    }
+}
+
 footer {
     background: url('../images/pattern-hills.svg');
     display: flex;
@@ -14,12 +23,7 @@ footer {
 
 }
 
-header {
-    align-self: center;
-}
-
 .attribution {
-    margin-bottom: 20px;
     color: $color-primary;
     a {
         color: $white;

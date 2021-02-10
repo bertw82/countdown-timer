@@ -1,6 +1,6 @@
 @mixin mq($break) {
     @if $break == sm {
-      @media (max-width: 375px) {
+      @media (max-width: 325px) {
         @content;
       }
     } @else if $break == med {
