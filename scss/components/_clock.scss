@@ -1,8 +1,6 @@
 #clock,
 ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+    @include grid($gt-col: repeat(4, 1fr), $gr-gap: 15px);
     margin: 0 15px 15px;
     @include mq(med){
         width: 70%;
@@ -17,14 +15,12 @@ ul {
 .clock-face {
     background: $dark-blue;
     height: 85px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: $color-secondary;
     font-size: 40px;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: 0 5px 5px 2px rgba(0,0,0,.3);
+    box-shadow: 0 5px 5px 2px $blue-black;
+    @include flexy($just: center, $align: center);
     @include mq(med){
         height: 120px;
         font-size: 70px

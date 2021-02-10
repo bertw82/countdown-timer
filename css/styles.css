@@ -407,14 +407,14 @@ ul {
 .clock-face {
   background: #343650;
   height: 85px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #fb6087;
   font-size: 40px;
   font-weight: bold;
   border-radius: 10px;
-  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 5px 2px #191a24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .clock-face {
@@ -435,7 +435,7 @@ ul {
 .social-icons {
   display: flex;
   justify-content: space-between;
-  width: 150px;
+  width: 140px;
   margin: 0 auto 10px;
 }
 

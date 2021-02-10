@@ -1,9 +1,7 @@
 body {
     background: url('../images/bg-stars.svg') $very-dark-blue;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 198px;
+    @include grid($gt-col: 1fr, $gt-row: 1fr 1fr 198px);
 }
 
 header {
@@ -17,10 +15,7 @@ header {
 
 footer {
     background: url('../images/pattern-hills.svg');
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
+    @include flexy($dir: column, $just: flex-end);
 }
 
 .attribution {
