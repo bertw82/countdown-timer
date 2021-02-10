@@ -31,6 +31,5 @@ const countdown = setInterval( () => {
     for (let i = 0; i < clocky.length; i++){   
         clocky[i].textContent = timeArr[i];
     }
-  });
-
+}, 1000);
 
