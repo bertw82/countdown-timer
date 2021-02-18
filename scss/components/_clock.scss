@@ -1,8 +1,9 @@
 #clock,
 ul {
-    @include grid($gt-col: repeat(4, 1fr), $gr-gap: 15px);
+    @include grid($gt-col: repeat(4, 1fr), $gr-gap: 10px);
     margin: 0 15px 15px;
     @include mq(med){
+        grid-gap: 15px;
         width: 70%;
         margin: 0 auto 20px;
     }
@@ -12,7 +13,27 @@ ul {
     }
 }
 
+%clock-style {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 10px;
+    background: $blue-black;
+    top: 36.5px;
+    @include mq(med) {
+        top: 52px;
+        width: 8px;
+        height: 15px;
+    }
+    @include mq(lg) {
+        top: 60px;
+        width: 10px;
+        height: 20px
+    }
+}
+
 .clock-face {
+    position: relative;
     background: $dark-blue;
     height: 85px;
     color: $color-secondary;
@@ -28,4 +49,34 @@ ul {
     @include mq(lg){
         height: 140px;
     }
+    &::before {
+        @extend %clock-style;
+        left: 0;
+        border-radius: 0 50% 50% 0;
+    }
+    &::after {
+        @extend %clock-style;
+        right: 0;
+        border-radius: 50% 0 0 50%;
+    }
 }
+
+.clock-section {
+    position: absolute;
+    height: 42.5px;
+    background: darken($dark-blue, 15%);
+    opacity: .4;
+    z-index: 1;
+    width: 78.75px;
+    border-radius: 10px 10px 0 0;
+    @include flexy($just: center, $align: center);
+    @include mq(med){
+        height: 60px;
+        width: 123.15px;
+    }
+    @include mq(lg){
+        height: 70px;
+        width: 140px;
+    }
+}
+

@@ -10,9 +10,14 @@ function pad(number) {
 }
 
 for (let i = 0; i < 4; i++){
-    const clockFace = document.createElement('div');
-    clockFace.className = 'clock-face';
-    clock.appendChild(clockFace);
+  const clockDiv = document.createElement('div');
+  const clockFace = document.createElement('div');
+  clockFace.className = 'clock-face';
+  const clockSection = document.createElement('div');
+  clockSection.className = 'clock-section';
+  clock.appendChild(clockDiv);
+  clockDiv.appendChild(clockSection);
+  clockDiv.appendChild(clockFace);
 }
 
 // outline for this code from https://www.w3schools.com/howto/howto_js_countdown.asp
