@@ -11,6 +11,7 @@ function pad(number) {
 
 for (let i = 0; i < 4; i++){
   const clockDiv = document.createElement('div');
+  clockDiv.className = 'clock-div';
   const clockFace = document.createElement('div');
   clockFace.className = 'clock-face';
   const clockSection = document.createElement('div');

@@ -31,9 +31,21 @@ ul {
         height: 20px
     }
 }
+.clock-div {
+    position: relative;
+    &::before {
+        @extend %clock-style;
+        left: 0;
+        border-radius: 0 50% 50% 0;
+    }
+    &::after {
+        @extend %clock-style;
+        right: 0;
+        border-radius: 50% 0 0 50%;
+    }
+}
 
 .clock-face {
-    position: relative;
     background: $dark-blue;
     height: 85px;
     color: $color-secondary;
@@ -49,16 +61,6 @@ ul {
     @include mq(lg){
         height: 140px;
     }
-    &::before {
-        @extend %clock-style;
-        left: 0;
-        border-radius: 0 50% 50% 0;
-    }
-    &::after {
-        @extend %clock-style;
-        right: 0;
-        border-radius: 50% 0 0 50%;
-    }
 }
 
 .clock-section {
@@ -67,16 +69,14 @@ ul {
     background: darken($dark-blue, 15%);
     opacity: .4;
     z-index: 1;
-    width: 78.75px;
+    width: 100%;
     border-radius: 10px 10px 0 0;
     @include flexy($just: center, $align: center);
     @include mq(med){
         height: 60px;
-        width: 123.15px;
     }
     @include mq(lg){
         height: 70px;
-        width: 140px;
     }
 }
 

@@ -405,7 +405,7 @@ ul {
   }
 }
 
-.clock-face::after, .clock-face::before {
+.clock-div::after, .clock-div::before {
   position: absolute;
   content: "";
   width: 6px;
@@ -414,22 +414,33 @@ ul {
   top: 36.5px;
 }
 @media (min-width: 768px) {
-  .clock-face::after, .clock-face::before {
+  .clock-div::after, .clock-div::before {
     top: 52px;
     width: 8px;
     height: 15px;
   }
 }
 @media (min-width: 1024px) {
-  .clock-face::after, .clock-face::before {
+  .clock-div::after, .clock-div::before {
     top: 60px;
     width: 10px;
     height: 20px;
   }
 }
 
-.clock-face {
+.clock-div {
   position: relative;
+}
+.clock-div::before {
+  left: 0;
+  border-radius: 0 50% 50% 0;
+}
+.clock-div::after {
+  right: 0;
+  border-radius: 50% 0 0 50%;
+}
+
+.clock-face {
   background: #343650;
   height: 85px;
   color: #fb6087;
@@ -452,14 +463,6 @@ ul {
     height: 140px;
   }
 }
-.clock-face::before {
-  left: 0;
-  border-radius: 0 50% 50% 0;
-}
-.clock-face::after {
-  right: 0;
-  border-radius: 50% 0 0 50%;
-}
 
 .clock-section {
   position: absolute;
@@ -467,7 +470,7 @@ ul {
   background: #161722;
   opacity: 0.4;
   z-index: 1;
-  width: 78.75px;
+  width: 100%;
   border-radius: 10px 10px 0 0;
   display: flex;
   justify-content: center;
@@ -476,13 +479,11 @@ ul {
 @media (min-width: 768px) {
   .clock-section {
     height: 60px;
-    width: 123.15px;
   }
 }
 @media (min-width: 1024px) {
   .clock-section {
     height: 70px;
-    width: 140px;
   }
 }
 
